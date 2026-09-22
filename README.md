@@ -1,16 +1,125 @@
-# React + Vite
+# 🎓 Student Management System using React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **Student Management System** built using **React.js and Vite** to demonstrate the use of **React `useState` Hook and Props**.
 
-Currently, two official plugins are available:
+The application allows users to add student details, view all students, see the total number of students, and delete students.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* ➕ Add new student
+* 👨‍🎓 Display student details
+* 🔢 Display total number of students
+* 🗑️ Delete a student
+* ⚛️ Demonstrates React `useState`
+* 🔄 Demonstrates passing data and functions using Props
+* 📱 Responsive design for smaller screens
+* 🎨 Clean and simple user interface
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+* **React.js**
+* **Vite**
+* **JavaScript (JSX)**
+* **HTML5**
+* **CSS3**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+
+```text
+student-management-react-usestate-props/
+│
+├── public/
+│
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+└── vite.config.js
+```
+
+## ⚛️ React Concepts Demonstrated
+
+### 1. useState Hook
+
+The project uses `useState` to manage:
+
+* Student list
+* Student name
+* Roll number
+* Course
+* Year
+
+Example:
+
+```jsx
+const [students, setStudents] = useState([]);
+```
+
+### 2. Props
+
+Student information and the delete function are passed from the parent component to the `StudentCard` component using props.
+
+```jsx
+<StudentCard
+  student={student}
+  onDelete={deleteStudent}
+/>
+```
+
+The child component receives these props:
+
+```jsx
+function StudentCard({ student, onDelete }) {
+  // ...
+}
+```
+
+### 3. Array Methods
+
+The project uses JavaScript array methods such as:
+
+* `map()` — to display students
+* `filter()` — to delete a student
+
+##
+
+## 📌 Learning Objective
+
+The main objective of this assignment is to understand the basics of React state management and component communication using:
+
+* `useState`
+* Props
+* Functional Components
+* Event Handling
+* Conditional Rendering
+* Array `map()`
+* Array `filter()`
+
+## 🔮 Future Improvements
+
+Possible improvements include:
+
+* Edit student details
+* Search students
+* Filter students by course or year
+* Store data using Local Storage
+* Add form validation
+* Connect the application to a database
+* Add authentication
+
+## 👩‍💻 Author
+
+**Amruta Bankar**
+
+B.Tech Computer Engineering Student
+
+---
+
+⭐ If you found this project useful, consider giving the repository a star!
