@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  min-height: 100vh;
+  color: #1e293b;
+}
+
+.app {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+
+/* Header */
+
+.header {
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.header h1 {
+  color: #3730a3;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #64748b;
+  padding-top: 3%;
+}
+
+
+/* Form */
+
+.form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+  margin-bottom: 20px;
+  color: #3730a3;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+input {
+  padding: 13px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 241, 118, 0.15);
+}
+
+form button {
+  grid-column: span 2;
+}
+
+
+/* Buttons */
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #3730a3;
+  transform: translateY(-2px);
+}
+
+
+/* Count */
+
+.count-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.count-card h2 {
+  color: #475569;
+}
+
+.count {
+  font-size: 45px;
+  font-weight: bold;
+  color: #4f46e5;
+  margin-top: 10px;
+}
+
+
+/* Students */
+
+.students-section {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.students-section > h2 {
+  color: #3730a3;
+  margin-bottom: 20px;
+}
+
+
+/* Student Card */
+
+.student-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  margin-bottom: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.student-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.12);
+  border-color: #a5b4fc;
+}
+
+.student-icon {
+  width: 55px;
+  height: 55px;
+  background: #eef2ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.student-info {
+  flex: 1;
+}
+
+.student-info h3 {
+  color: #312e81;
+  margin-bottom: 7px;
+}
+
+.student-info p {
+  color: #64748b;
+  margin: 3px 0;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.empty {
+  text-align: center;
+  color: #94a3b8;
+  padding: 20px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form button {
+    grid-column: span 1;
+  }
+
+  .student-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
